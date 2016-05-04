@@ -1,0 +1,43 @@
+  <!-- MIxS class definitions -->
+  <!-- <dcterms:modified>2016-05-03</dcterms:modified> -->
+
+  <rdf:Description rdf:about="http://gensc.org/ns/mixs/Environment">
+    <rdfs:label xml:lang="en">Environment</rdfs:label>
+    <rdfs:comment xml:lang="en">The category of information pertaining to environment.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://gensc.org/ns/mixs/" />
+    <dcterms:issued>2013-03-26</dcterms:issued>
+    <dcterms:modified>2016-05-03</dcterms:modified>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class" />
+    <dwcattributes:status>recommended</dwcattributes:status>
+    <dwcattributes:abcdEquivalence>not in ABCD</dwcattributes:abcdEquivalence>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://gensc.org/ns/mixs/Investigation">
+    <rdfs:label xml:lang="en">Investigation</rdfs:label>
+    <rdfs:comment xml:lang="en">The category of information pertaining to an investigation.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://gensc.org/ns/mixs/" />
+    <dcterms:issued>2013-03-26</dcterms:issued>
+    <dcterms:modified>2016-05-03</dcterms:modified>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class" />
+    <dwcattributes:status>recommended</dwcattributes:status>
+    <dwcattributes:abcdEquivalence>not in ABCD</dwcattributes:abcdEquivalence>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://gensc.org/ns/mixs/NucleicAcidSequenceSource">
+    <rdfs:label xml:lang="en">NucleicAcidSequenceSource</rdfs:label>
+    <rdfs:comment xml:lang="en">The category of information pertaining to nucleic acid sequence source.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://gensc.org/ns/mixs/" />
+    <dcterms:issued>2013-03-26</dcterms:issued>
+    <dcterms:modified>2016-05-03</dcterms:modified>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class" />
+    <dwcattributes:status>recommended</dwcattributes:status>
+    <dwcattributes:abcdEquivalence>not in ABCD</dwcattributes:abcdEquivalence>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://gensc.org/ns/mixs/Sequencing">
+    <rdfs:label xml:lang="en">Sequencing</rdfs:label>
+    <rdfs:comment xml:lang="en">The category of information pertaining to sequencing.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://gensc.org/ns/mixs/" />
+    <dcterms:issued>2013-03-26</dcterms:issued>
+    <dcterms:modified>2016-05-03</dcterms:modified>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class" />
+    <dwcattributes:status>recommended</dwcattributes:status>
+    <dwcattributes:abcdEquivalence>not in ABCD</dwcattributes:abcdEquivalence>
+  </rdf:Description>

@@ -1,0 +1,597 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE rdf:RDF [
+  <!ENTITY owlns "http://www.w3.org/2002/07/owl#">
+  <!ENTITY rdfns "http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+  <!ENTITY rdfsns "http://www.w3.org/2000/01/rdf-schema#">
+  <!ENTITY dctermsns "http://purl.org/dc/terms/">
+  <!ENTITY dwctermsns "http://rs.tdwg.org/dwc/terms/">
+  <!ENTITY dctypens "http://purl.org/dc/dcmitype/">
+  <!ENTITY dwcattributesns "http://rs.tdwg.org/dwc/terms/attributes/">
+]>
+<rdf:RDF 
+  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" 
+  xmlns:owl="http://www.w3.org/2002/07/owl#" 
+  xmlns:dcterms="http://purl.org/dc/terms/" 
+  xmlns:dwc="http://rs.tdwg.org/dwc/terms/" 
+  xmlns:dwcattributes="http://rs.tdwg.org/dwc/terms/attributes/" 
+  xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" 
+  xml:base="http://gensc.org/ns/mixs/terms/">
+   <rdf:Description rdf:about="http://gensc.org/ns/mixs/terms/">
+      <dcterms:title xml:lang="en">MIxS Namespace for terms in the http://gensc.org/ns/mixs/terms/ namespace</dcterms:title>
+      <rdfs:comment>To comment on this schema, please create a new issue in http://mixs.gensc.org/newticket</rdfs:comment>
+      <dcterms:publisher xml:lang="en">Genomic Standards Consortium (GSC)</dcterms:publisher>
+      <dcterms:modified>2016-05-03</dcterms:modified>
+   </rdf:Description>
+   <!-- 
+  Each rdf:Description uses the following:
+    owl:sameAs
+    rdfs:label
+    rdfs:comment
+    dcterms:description
+    rdfs:isDefinedBy
+    rdf:type
+    dwcattributes:status
+    dcterms:issued
+    dcterms:modified
+    dcterms:replaces
+    dwcattributes:abcdEquivalence
+-->
+  <!-- CLASSES -->
+  <!-- Class definitions come from classes.rdf. -->
+
+  <!-- MIxS class definitions -->
+  <!-- <dcterms:modified>2016-05-03</dcterms:modified> -->
+
+  <rdf:Description rdf:about="http://gensc.org/ns/mixs/Environment">
+    <rdfs:label xml:lang="en">Environment</rdfs:label>
+    <rdfs:comment xml:lang="en">The category of information pertaining to environment.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://gensc.org/ns/mixs/" />
+    <dcterms:issued>2013-03-26</dcterms:issued>
+    <dcterms:modified>2016-05-03</dcterms:modified>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class" />
+    <dwcattributes:status>recommended</dwcattributes:status>
+    <dwcattributes:abcdEquivalence>not in ABCD</dwcattributes:abcdEquivalence>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://gensc.org/ns/mixs/Investigation">
+    <rdfs:label xml:lang="en">Investigation</rdfs:label>
+    <rdfs:comment xml:lang="en">The category of information pertaining to an investigation.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://gensc.org/ns/mixs/" />
+    <dcterms:issued>2013-03-26</dcterms:issued>
+    <dcterms:modified>2016-05-03</dcterms:modified>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class" />
+    <dwcattributes:status>recommended</dwcattributes:status>
+    <dwcattributes:abcdEquivalence>not in ABCD</dwcattributes:abcdEquivalence>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://gensc.org/ns/mixs/NucleicAcidSequenceSource">
+    <rdfs:label xml:lang="en">NucleicAcidSequenceSource</rdfs:label>
+    <rdfs:comment xml:lang="en">The category of information pertaining to nucleic acid sequence source.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://gensc.org/ns/mixs/" />
+    <dcterms:issued>2013-03-26</dcterms:issued>
+    <dcterms:modified>2016-05-03</dcterms:modified>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class" />
+    <dwcattributes:status>recommended</dwcattributes:status>
+    <dwcattributes:abcdEquivalence>not in ABCD</dwcattributes:abcdEquivalence>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://gensc.org/ns/mixs/Sequencing">
+    <rdfs:label xml:lang="en">Sequencing</rdfs:label>
+    <rdfs:comment xml:lang="en">The category of information pertaining to sequencing.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://gensc.org/ns/mixs/" />
+    <dcterms:issued>2013-03-26</dcterms:issued>
+    <dcterms:modified>2016-05-03</dcterms:modified>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class" />
+    <dwcattributes:status>recommended</dwcattributes:status>
+    <dwcattributes:abcdEquivalence>not in ABCD</dwcattributes:abcdEquivalence>
+  </rdf:Description>
+
+  <!-- MIxS PROPERTIES -->
+  <!-- Property definitions come from processing mixs_core.csv. -->
+  <rdf:Description rdf:about="http://gensc.org/ns/mixs/adapters">
+    <rdfs:label xml:lang="en">adapters</rdfs:label>
+    <rdfs:comment xml:lang="en">Adapters provide priming sequences for both amplification and sequencing of the sample-library fragments. Both adapters should be reported; in uppercase letters</rdfs:comment>
+    <dcterms:description xml:lang="en"></dcterms:description>
+    <rdfs:isDefinedBy rdf:resource="http://gensc.org/ns/mixs/" />
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+    <dwcattributes:status>recommended</dwcattributes:status>
+    <dwcattributes:organizedInClass rdf:resource="http://gensc.org/ns/mixs/terms/Sequencing" />
+    <dcterms:issued>2011-01-26</dcterms:issued>
+    <dcterms:modified>2011-01-26</dcterms:modified>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://gensc.org/ns/mixs/alt_elev">
+    <owl:sameAs rdf:resource="http://rs.tdwg.org/dwc/terms/verbatimElevation"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://gensc.org/ns/mixs/annot_source">
+    <rdfs:label xml:lang="en">annotation source</rdfs:label>
+    <rdfs:comment xml:lang="en">For cases where annotation was provided by a community jamboree or model organism database rather than by a specific submitter</rdfs:comment>
+    <dcterms:description xml:lang="en"></dcterms:description>
+    <rdfs:isDefinedBy rdf:resource="http://gensc.org/ns/mixs/" />
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+    <dwcattributes:status>recommended</dwcattributes:status>
+    <dwcattributes:organizedInClass rdf:resource="http://gensc.org/ns/mixs/terms/Sequencing" />
+    <dcterms:issued>2011-01-26</dcterms:issued>
+    <dcterms:modified>2011-01-26</dcterms:modified>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://gensc.org/ns/mixs/assembly">
+    <rdfs:label xml:lang="en">assembly</rdfs:label>
+    <rdfs:comment xml:lang="en">How was the assembly done (e.g. with a text based assembler like phrap or a flowgram assembler); estimated error rate associated with the finished sequences (e.g. error rate of 1 in 1000 bp); and the method of calculation</rdfs:comment>
+    <dcterms:description xml:lang="en"></dcterms:description>
+    <rdfs:isDefinedBy rdf:resource="http://gensc.org/ns/mixs/" />
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+    <dwcattributes:status>recommended</dwcattributes:status>
+    <dwcattributes:organizedInClass rdf:resource="http://gensc.org/ns/mixs/terms/Sequencing" />
+    <dcterms:issued>2011-01-26</dcterms:issued>
+    <dcterms:modified>2011-01-26</dcterms:modified>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://gensc.org/ns/mixs/assembly_name">
+    <rdfs:label xml:lang="en">assembly name</rdfs:label>
+    <rdfs:comment xml:lang="en">Nameversion of the assembly provided by the submitter that is used in the genome browsers and in the community</rdfs:comment>
+    <dcterms:description xml:lang="en">HuRef, JCVI_ISG_i3_1.0</dcterms:description>
+    <rdfs:isDefinedBy rdf:resource="http://gensc.org/ns/mixs/" />
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+    <dwcattributes:status>recommended</dwcattributes:status>
+    <dwcattributes:organizedInClass rdf:resource="http://gensc.org/ns/mixs/terms/Sequencing" />
+    <dcterms:issued>2011-01-26</dcterms:issued>
+    <dcterms:modified>2011-01-26</dcterms:modified>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://gensc.org/ns/mixs/biotic_relationship">
+    <rdfs:label xml:lang="en">observed biotic relationship</rdfs:label>
+    <rdfs:comment xml:lang="en">Is it free-living or in a host and if the latter what type of relationship is observed</rdfs:comment>
+    <dcterms:description xml:lang="en">""</dcterms:description>
+    <rdfs:isDefinedBy rdf:resource="http://gensc.org/ns/mixs/" />
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+    <dwcattributes:status>recommended</dwcattributes:status>
+    <dwcattributes:organizedInClass rdf:resource="http://gensc.org/ns/mixs/terms/NucleicAcidSequenceSource" />
+    <dcterms:issued>2011-01-26</dcterms:issued>
+    <dcterms:modified>2011-01-26</dcterms:modified>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://gensc.org/ns/mixs/chimera_check">
+    <rdfs:label xml:lang="en">chimera check</rdfs:label>
+    <rdfs:comment xml:lang="en">A chimeric sequence, or chimera for short, is a sequence comprised of two or more phylogenetically distinct parent sequences. Chimeras are usually PCR artifacts thought to occur when a prematurely terminated amplicon reanneals to a foreign DNA strand and is copied to completion in the following PCR cycles. The point at which the chimeric sequence changes from one parent to the next is called the breakpoint or conversion point </rdfs:comment>
+    <dcterms:description xml:lang="en"></dcterms:description>
+    <rdfs:isDefinedBy rdf:resource="http://gensc.org/ns/mixs/" />
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+    <dwcattributes:status>recommended</dwcattributes:status>
+    <dwcattributes:organizedInClass rdf:resource="http://gensc.org/ns/mixs/terms/Sequencing" />
+    <dcterms:issued>2011-01-26</dcterms:issued>
+    <dcterms:modified>2011-01-26</dcterms:modified>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://gensc.org/ns/mixs/collection_date">
+    <owl:sameAs rdf:resource="http://rs.tdwg.org/dwc/terms/eventDate"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://gensc.org/ns/mixs/depth">
+    <owl:sameAs rdf:resource="http://rs.tdwg.org/dwc/terms/verbatimDepth"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://gensc.org/ns/mixs/encoded_traits">
+    <rdfs:label xml:lang="en">encoded traits</rdfs:label>
+    <rdfs:comment xml:lang="en">Should include key traits like antibiotic resistance or xenobiotic degradation phenotypes for plasmids, converting genes for phage</rdfs:comment>
+    <dcterms:description xml:lang="en"></dcterms:description>
+    <rdfs:isDefinedBy rdf:resource="http://gensc.org/ns/mixs/" />
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+    <dwcattributes:status>recommended</dwcattributes:status>
+    <dwcattributes:organizedInClass rdf:resource="http://gensc.org/ns/mixs/terms/NucleicAcidSequenceSource" />
+    <dcterms:issued>2011-01-26</dcterms:issued>
+    <dcterms:modified>2011-01-26</dcterms:modified>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://gensc.org/ns/mixs/env_biome">
+    <owl:sameAs rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000428"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://gensc.org/ns/mixs/env_feature">
+    <owl:sameAs rdf:resource="http://purl.obolibrary.org/obo/ENVO_00002297"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://gensc.org/ns/mixs/env_material">
+    <owl:sameAs rdf:resource="http://purl.obolibrary.org/obo/ENVO_00010483"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://gensc.org/ns/mixs/env_package">
+    <rdfs:label xml:lang="en">environmental package</rdfs:label>
+    <rdfs:comment xml:lang="en">MIGSMIMSMIMARKS extension for reporting of measurements and observations obtained from one or more of the environments where the sample was obtained. All environmental packages listed here are further defined in separate subtables. By giving the name of the environmental package, a selection of fields can be made from the subtables and can be reported</rdfs:comment>
+    <dcterms:description xml:lang="en"></dcterms:description>
+    <rdfs:isDefinedBy rdf:resource="http://gensc.org/ns/mixs/" />
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+    <dwcattributes:status>recommended</dwcattributes:status>
+    <dwcattributes:organizedInClass rdf:resource="http://gensc.org/ns/mixs/terms/Environment" />
+    <dcterms:issued>2011-01-26</dcterms:issued>
+    <dcterms:modified>2011-01-26</dcterms:modified>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://gensc.org/ns/mixs/estimated_size">
+    <rdfs:label xml:lang="en">estimated size</rdfs:label>
+    <rdfs:comment xml:lang="en">The estimated size of the genome prior to sequencing. Of particular importance in the sequencing of (eukaryotic) genome which could remain in draft form for a long or unspecified period.</rdfs:comment>
+    <dcterms:description xml:lang="en">300000 bp</dcterms:description>
+    <rdfs:isDefinedBy rdf:resource="http://gensc.org/ns/mixs/" />
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+    <dwcattributes:status>recommended</dwcattributes:status>
+    <dwcattributes:organizedInClass rdf:resource="http://gensc.org/ns/mixs/terms/NucleicAcidSequenceSource" />
+    <dcterms:issued>2011-01-26</dcterms:issued>
+    <dcterms:modified>2011-01-26</dcterms:modified>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://gensc.org/ns/mixs/experimental_factor">
+    <rdfs:label xml:lang="en">experimental factor</rdfs:label>
+    <rdfs:comment xml:lang="en">Experimental factors are essentially the variable aspects of an experiment design which can be used to describe an experiment, or set of experiments, in an increasingly detailed manner. This field accepts ontology terms from Experimental Factor Ontology (EFO) andor Ontology for Biomedical Investigations (OBI). For a browser of EFO (v 2.43) terms, please see http:/purl.bioontology.orgontologyEFO; for a browser of OBI (v 2013-10-25) terms please see http:/purl.bioontology.orgontologyOBI</rdfs:comment>
+    <dcterms:description xml:lang="en"></dcterms:description>
+    <rdfs:isDefinedBy rdf:resource="http://gensc.org/ns/mixs/" />
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+    <dwcattributes:status>recommended</dwcattributes:status>
+    <dwcattributes:organizedInClass rdf:resource="http://gensc.org/ns/mixs/terms/Investigation" />
+    <dcterms:issued>2011-01-26</dcterms:issued>
+    <dcterms:modified>2011-01-26</dcterms:modified>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://gensc.org/ns/mixs/extrachrom_elements">
+    <rdfs:label xml:lang="en">extrachromosomal elements</rdfs:label>
+    <rdfs:comment xml:lang="en">Do plasmids exist of significant phenotypic consequence (e.g. ones that determine virulence or antibiotic resistance). Megaplasmids? Other plasmids (borrelia has 15+ plasmids)</rdfs:comment>
+    <dcterms:description xml:lang="en"></dcterms:description>
+    <rdfs:isDefinedBy rdf:resource="http://gensc.org/ns/mixs/" />
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+    <dwcattributes:status>recommended</dwcattributes:status>
+    <dwcattributes:organizedInClass rdf:resource="http://gensc.org/ns/mixs/terms/NucleicAcidSequenceSource" />
+    <dcterms:issued>2011-01-26</dcterms:issued>
+    <dcterms:modified>2011-01-26</dcterms:modified>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://gensc.org/ns/mixs/finishing_strategy">
+    <rdfs:label xml:lang="en">finishing strategy</rdfs:label>
+    <rdfs:comment xml:lang="en">Was the genome project intended to produce a complete or draft genome, Coverage, the fold coverage of the sequencing expressed as 2x, 3x, 18x  etc, and how many contigs were produced for the genome</rdfs:comment>
+    <dcterms:description xml:lang="en"></dcterms:description>
+    <rdfs:isDefinedBy rdf:resource="http://gensc.org/ns/mixs/" />
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+    <dwcattributes:status>recommended</dwcattributes:status>
+    <dwcattributes:organizedInClass rdf:resource="http://gensc.org/ns/mixs/terms/Sequencing" />
+    <dcterms:issued>2011-01-26</dcterms:issued>
+    <dcterms:modified>2011-01-26</dcterms:modified>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://gensc.org/ns/mixs/geo_loc_name">
+    <owl:sameAs rdf:resource="http://rs.tdwg.org/dwc/terms/locality"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://gensc.org/ns/mixs/health_disease_stat">
+    <rdfs:label xml:lang="en">health or disease status of specific host at time of collection</rdfs:label>
+    <rdfs:comment xml:lang="en">Health or disease status of specific host at time of collection. This field accepts PATO (v 2013-10-28) terms, for a browser please see http:/purl.bioontology.orgontologyPATO</rdfs:comment>
+    <dcterms:description xml:lang="en"></dcterms:description>
+    <rdfs:isDefinedBy rdf:resource="http://gensc.org/ns/mixs/" />
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+    <dwcattributes:status>recommended</dwcattributes:status>
+    <dwcattributes:organizedInClass rdf:resource="http://gensc.org/ns/mixs/terms/NucleicAcidSequenceSource" />
+    <dcterms:issued>2011-01-26</dcterms:issued>
+    <dcterms:modified>2011-01-26</dcterms:modified>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://gensc.org/ns/mixs/host_spec_range">
+    <rdfs:label xml:lang="en">host specificity or range</rdfs:label>
+    <rdfs:comment xml:lang="en">The NCBI taxonomy identifier of the specific host if it is known</rdfs:comment>
+    <dcterms:description xml:lang="en"></dcterms:description>
+    <rdfs:isDefinedBy rdf:resource="http://gensc.org/ns/mixs/" />
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+    <dwcattributes:status>recommended</dwcattributes:status>
+    <dwcattributes:organizedInClass rdf:resource="http://gensc.org/ns/mixs/terms/NucleicAcidSequenceSource" />
+    <dcterms:issued>2011-01-26</dcterms:issued>
+    <dcterms:modified>2011-01-26</dcterms:modified>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://gensc.org/ns/mixs/investigation_type">
+    <rdfs:label xml:lang="en">investigation type</rdfs:label>
+    <rdfs:comment xml:lang="en">Nucleic Acid Sequence Report is the root element of all MIGSMIMS compliant reports as standardized by Genomic Standards Consortium. This field is either eukaryote,bacteria,virus,plasmid,organelle, metagenome,mimarks-survey, or mimarks-specimen</rdfs:comment>
+    <dcterms:description xml:lang="en"></dcterms:description>
+    <rdfs:isDefinedBy rdf:resource="http://gensc.org/ns/mixs/" />
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+    <dwcattributes:status>recommended</dwcattributes:status>
+    <dwcattributes:organizedInClass rdf:resource="http://gensc.org/ns/mixs/terms/Investigation" />
+    <dcterms:issued>2011-01-26</dcterms:issued>
+    <dcterms:modified>2011-01-26</dcterms:modified>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://gensc.org/ns/mixs/isol_growth_condt">
+    <owl:sameAs rdf:resource="http://rs.tdwg.org/dwc/terms/samplingProtocol"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://gensc.org/ns/mixs/lat_lon">
+    <owl:sameAs rdf:resource="http://rs.tdwg.org/dwc/terms/verbatimCoordinates"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://gensc.org/ns/mixs/lib_const_meth">
+    <rdfs:label xml:lang="en">library construction method</rdfs:label>
+    <rdfs:comment xml:lang="en">Library construction method used for clone libraries</rdfs:comment>
+    <dcterms:description xml:lang="en">paired-end,single,vector</dcterms:description>
+    <rdfs:isDefinedBy rdf:resource="http://gensc.org/ns/mixs/" />
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+    <dwcattributes:status>recommended</dwcattributes:status>
+    <dwcattributes:organizedInClass rdf:resource="http://gensc.org/ns/mixs/terms/Sequencing" />
+    <dcterms:issued>2011-01-26</dcterms:issued>
+    <dcterms:modified>2011-01-26</dcterms:modified>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://gensc.org/ns/mixs/lib_reads_seqd">
+    <rdfs:label xml:lang="en">library reads sequenced</rdfs:label>
+    <rdfs:comment xml:lang="en">Total number of clones sequenced from the library</rdfs:comment>
+    <dcterms:description xml:lang="en"></dcterms:description>
+    <rdfs:isDefinedBy rdf:resource="http://gensc.org/ns/mixs/" />
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+    <dwcattributes:status>recommended</dwcattributes:status>
+    <dwcattributes:organizedInClass rdf:resource="http://gensc.org/ns/mixs/terms/Sequencing" />
+    <dcterms:issued>2011-01-26</dcterms:issued>
+    <dcterms:modified>2011-01-26</dcterms:modified>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://gensc.org/ns/mixs/lib_screen">
+    <rdfs:label xml:lang="en">library screening strategy</rdfs:label>
+    <rdfs:comment xml:lang="en">Specific enrichment or screening methods applied before andor after creating clone libraries</rdfs:comment>
+    <dcterms:description xml:lang="en">enriched, screened, normalized</dcterms:description>
+    <rdfs:isDefinedBy rdf:resource="http://gensc.org/ns/mixs/" />
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+    <dwcattributes:status>recommended</dwcattributes:status>
+    <dwcattributes:organizedInClass rdf:resource="http://gensc.org/ns/mixs/terms/Sequencing" />
+    <dcterms:issued>2011-01-26</dcterms:issued>
+    <dcterms:modified>2011-01-26</dcterms:modified>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://gensc.org/ns/mixs/lib_size">
+    <rdfs:label xml:lang="en">library size</rdfs:label>
+    <rdfs:comment xml:lang="en">Total number of clones in the library prepared for the project</rdfs:comment>
+    <dcterms:description xml:lang="en"></dcterms:description>
+    <rdfs:isDefinedBy rdf:resource="http://gensc.org/ns/mixs/" />
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+    <dwcattributes:status>recommended</dwcattributes:status>
+    <dwcattributes:organizedInClass rdf:resource="http://gensc.org/ns/mixs/terms/Sequencing" />
+    <dcterms:issued>2011-01-26</dcterms:issued>
+    <dcterms:modified>2011-01-26</dcterms:modified>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://gensc.org/ns/mixs/lib_vector">
+    <rdfs:label xml:lang="en">library vector</rdfs:label>
+    <rdfs:comment xml:lang="en">Cloning vector type(s) used in construction of libraries</rdfs:comment>
+    <dcterms:description xml:lang="en"></dcterms:description>
+    <rdfs:isDefinedBy rdf:resource="http://gensc.org/ns/mixs/" />
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+    <dwcattributes:status>recommended</dwcattributes:status>
+    <dwcattributes:organizedInClass rdf:resource="http://gensc.org/ns/mixs/terms/Sequencing" />
+    <dcterms:issued>2011-01-26</dcterms:issued>
+    <dcterms:modified>2011-01-26</dcterms:modified>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://gensc.org/ns/mixs/mid">
+    <rdfs:label xml:lang="en">multiplex identifiers</rdfs:label>
+    <rdfs:comment xml:lang="en">Molecular barcodes, called Multiplex Identifiers (MIDs), that are used to specifically tag unique samples in a sequencing run. Sequence should be reported in uppercase letters</rdfs:comment>
+    <dcterms:description xml:lang="en"></dcterms:description>
+    <rdfs:isDefinedBy rdf:resource="http://gensc.org/ns/mixs/" />
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+    <dwcattributes:status>recommended</dwcattributes:status>
+    <dwcattributes:organizedInClass rdf:resource="http://gensc.org/ns/mixs/terms/Sequencing" />
+    <dcterms:issued>2011-01-26</dcterms:issued>
+    <dcterms:modified>2011-01-26</dcterms:modified>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://gensc.org/ns/mixs/nucl_acid_amp">
+    <rdfs:label xml:lang="en">nucleic acid amplification</rdfs:label>
+    <rdfs:comment xml:lang="en">Link to a literature reference, electronic resource or a standard operating procedure (SOP)</rdfs:comment>
+    <dcterms:description xml:lang="en"></dcterms:description>
+    <rdfs:isDefinedBy rdf:resource="http://gensc.org/ns/mixs/" />
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+    <dwcattributes:status>recommended</dwcattributes:status>
+    <dwcattributes:organizedInClass rdf:resource="http://gensc.org/ns/mixs/terms/Sequencing" />
+    <dcterms:issued>2011-01-26</dcterms:issued>
+    <dcterms:modified>2011-01-26</dcterms:modified>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://gensc.org/ns/mixs/nucl_acid_ext">
+    <rdfs:label xml:lang="en">nucleic acid extraction</rdfs:label>
+    <rdfs:comment xml:lang="en">Link to a literature reference, electronic resource or a standard operating procedure (SOP)</rdfs:comment>
+    <dcterms:description xml:lang="en"></dcterms:description>
+    <rdfs:isDefinedBy rdf:resource="http://gensc.org/ns/mixs/" />
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+    <dwcattributes:status>recommended</dwcattributes:status>
+    <dwcattributes:organizedInClass rdf:resource="http://gensc.org/ns/mixs/terms/Sequencing" />
+    <dcterms:issued>2011-01-26</dcterms:issued>
+    <dcterms:modified>2011-01-26</dcterms:modified>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://gensc.org/ns/mixs/num_replicons">
+    <rdfs:label xml:lang="en">number of replicons</rdfs:label>
+    <rdfs:comment xml:lang="en">Reports the number of replicons in a nuclear genome of eukaryotes, in the genome of a bacterium or archaea or the number of segments in a segmented virus. Always applied to the haploid chromosome count of a eukaryote</rdfs:comment>
+    <dcterms:description xml:lang="en"></dcterms:description>
+    <rdfs:isDefinedBy rdf:resource="http://gensc.org/ns/mixs/" />
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+    <dwcattributes:status>recommended</dwcattributes:status>
+    <dwcattributes:organizedInClass rdf:resource="http://gensc.org/ns/mixs/terms/NucleicAcidSequenceSource" />
+    <dcterms:issued>2011-01-26</dcterms:issued>
+    <dcterms:modified>2011-01-26</dcterms:modified>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://gensc.org/ns/mixs/pathogenicity">
+    <rdfs:label xml:lang="en">known pathogenicity</rdfs:label>
+    <rdfs:comment xml:lang="en">To what is the entity pathogenic. </rdfs:comment>
+    <dcterms:description xml:lang="en">human, animal, plant, fungi, bacteria</dcterms:description>
+    <rdfs:isDefinedBy rdf:resource="http://gensc.org/ns/mixs/" />
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+    <dwcattributes:status>recommended</dwcattributes:status>
+    <dwcattributes:organizedInClass rdf:resource="http://gensc.org/ns/mixs/terms/NucleicAcidSequenceSource" />
+    <dcterms:issued>2011-01-26</dcterms:issued>
+    <dcterms:modified>2011-01-26</dcterms:modified>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://gensc.org/ns/mixs/pcr_cond">
+    <rdfs:label xml:lang="en">pcr conditions</rdfs:label>
+    <rdfs:comment xml:lang="en">Description of reaction conditions and components for PCR in the form of  'initial denaturation:94degC_1.5min; annealing=...'</rdfs:comment>
+    <dcterms:description xml:lang="en"></dcterms:description>
+    <rdfs:isDefinedBy rdf:resource="http://gensc.org/ns/mixs/" />
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+    <dwcattributes:status>recommended</dwcattributes:status>
+    <dwcattributes:organizedInClass rdf:resource="http://gensc.org/ns/mixs/terms/Sequencing" />
+    <dcterms:issued>2011-01-26</dcterms:issued>
+    <dcterms:modified>2011-01-26</dcterms:modified>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://gensc.org/ns/mixs/pcr_primers">
+    <rdfs:label xml:lang="en">pcr primers</rdfs:label>
+    <rdfs:comment xml:lang="en">PCR primers that were used to amplify the sequence of the targeted gene, locus or subfragment. This field should contain all the primers used for a single PCR reaction if multiple forward or reverse primers are present in a single PCR reaction. The primer sequence should be reported in uppercase letters</rdfs:comment>
+    <dcterms:description xml:lang="en"></dcterms:description>
+    <rdfs:isDefinedBy rdf:resource="http://gensc.org/ns/mixs/" />
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+    <dwcattributes:status>recommended</dwcattributes:status>
+    <dwcattributes:organizedInClass rdf:resource="http://gensc.org/ns/mixs/terms/Sequencing" />
+    <dcterms:issued>2011-01-26</dcterms:issued>
+    <dcterms:modified>2011-01-26</dcterms:modified>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://gensc.org/ns/mixs/ploidy">
+    <rdfs:label xml:lang="en">ploidy</rdfs:label>
+    <rdfs:comment xml:lang="en">The ploidy level of the genome (e.g. allopolyploid, haploid, diploid, triploid, tetraploid). It has implications for the downstream study of duplicated gene and regions of the genomes (and perhaps for difficulties in assembly). For terms, please select terms listed under class ploidy (PATO:001374) of Phenotypic Quality Ontology (PATO), and for a browser of PATO (v 2013-10-28) please refer to http:/purl.bioontology.orgontologyPATO</rdfs:comment>
+    <dcterms:description xml:lang="en">allopolyploid, polyploid</dcterms:description>
+    <rdfs:isDefinedBy rdf:resource="http://gensc.org/ns/mixs/" />
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+    <dwcattributes:status>recommended</dwcattributes:status>
+    <dwcattributes:organizedInClass rdf:resource="http://gensc.org/ns/mixs/terms/NucleicAcidSequenceSource" />
+    <dcterms:issued>2011-01-26</dcterms:issued>
+    <dcterms:modified>2011-01-26</dcterms:modified>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://gensc.org/ns/mixs/project_name">
+    <owl:sameAs rdf:resource="http://rs.tdwg.org/dwc/terms/datasetName"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://gensc.org/ns/mixs/propagation">
+    <rdfs:label xml:lang="en">propagation</rdfs:label>
+    <rdfs:comment xml:lang="en">This field is specific to different taxa. For phages: lyticlysogenic, for plasmids: incompatibility group (Note: there is the strong opinion to name phage propagation obligately lytic or temperate, therefore we also give this choice</rdfs:comment>
+    <dcterms:description xml:lang="en"></dcterms:description>
+    <rdfs:isDefinedBy rdf:resource="http://gensc.org/ns/mixs/" />
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+    <dwcattributes:status>recommended</dwcattributes:status>
+    <dwcattributes:organizedInClass rdf:resource="http://gensc.org/ns/mixs/terms/NucleicAcidSequenceSource" />
+    <dcterms:issued>2011-01-26</dcterms:issued>
+    <dcterms:modified>2011-01-26</dcterms:modified>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://gensc.org/ns/mixs/ref_biomaterial">
+    <rdfs:label xml:lang="en">reference for biomaterial</rdfs:label>
+    <rdfs:comment xml:lang="en">primary publication if isolated before genome publication; otherwise, primary genome report</rdfs:comment>
+    <dcterms:description xml:lang="en"></dcterms:description>
+    <rdfs:isDefinedBy rdf:resource="http://gensc.org/ns/mixs/" />
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+    <dwcattributes:status>recommended</dwcattributes:status>
+    <dwcattributes:organizedInClass rdf:resource="http://gensc.org/ns/mixs/terms/NucleicAcidSequenceSource" />
+    <dcterms:issued>2011-01-26</dcterms:issued>
+    <dcterms:modified>2011-01-26</dcterms:modified>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://gensc.org/ns/mixs/rel_to_oxygen">
+    <rdfs:label xml:lang="en">relationship to oxygen</rdfs:label>
+    <rdfs:comment xml:lang="en">Is this organism an aerobe, anaerobe? Please note that aerobic and anaerobic are valid descriptors for microbial environments</rdfs:comment>
+    <dcterms:description xml:lang="en">'</dcterms:description>
+    <rdfs:isDefinedBy rdf:resource="http://gensc.org/ns/mixs/" />
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+    <dwcattributes:status>recommended</dwcattributes:status>
+    <dwcattributes:organizedInClass rdf:resource="http://gensc.org/ns/mixs/terms/NucleicAcidSequenceSource" />
+    <dcterms:issued>2011-01-26</dcterms:issued>
+    <dcterms:modified>2011-01-26</dcterms:modified>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://gensc.org/ns/mixs/samp_collect_device">
+    <rdfs:label xml:lang="en">sample collection device or method</rdfs:label>
+    <rdfs:comment xml:lang="en">The method or device employed for collecting the sample</rdfs:comment>
+    <dcterms:description xml:lang="en">biopsy, niskin bottle, push core</dcterms:description>
+    <rdfs:isDefinedBy rdf:resource="http://gensc.org/ns/mixs/" />
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+    <dwcattributes:status>recommended</dwcattributes:status>
+    <dwcattributes:organizedInClass rdf:resource="http://gensc.org/ns/mixs/terms/NucleicAcidSequenceSource" />
+    <dcterms:issued>2011-01-26</dcterms:issued>
+    <dcterms:modified>2011-01-26</dcterms:modified>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://gensc.org/ns/mixs/samp_mat_process">
+    <rdfs:label xml:lang="en">sample material processing</rdfs:label>
+    <rdfs:comment xml:lang="en">Any processing applied to the sample during or after retrieving the sample from environment. This field accepts OBI, for a browser of OBI (v 2013-10-25) terms please see http:/purl.bioontology.orgontologyOBI</rdfs:comment>
+    <dcterms:description xml:lang="en">filtering of seawater, storing samples in ethanol</dcterms:description>
+    <rdfs:isDefinedBy rdf:resource="http://gensc.org/ns/mixs/" />
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+    <dwcattributes:status>recommended</dwcattributes:status>
+    <dwcattributes:organizedInClass rdf:resource="http://gensc.org/ns/mixs/terms/NucleicAcidSequenceSource" />
+    <dcterms:issued>2011-01-26</dcterms:issued>
+    <dcterms:modified>2011-01-26</dcterms:modified>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://gensc.org/ns/mixs/samp_size">
+    <rdfs:label xml:lang="en">amount or size of sample collected</rdfs:label>
+    <rdfs:comment xml:lang="en">Amount or size of sample (volume, mass or area) that was collected</rdfs:comment>
+    <dcterms:description xml:lang="en"></dcterms:description>
+    <rdfs:isDefinedBy rdf:resource="http://gensc.org/ns/mixs/" />
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+    <dwcattributes:status>recommended</dwcattributes:status>
+    <dwcattributes:organizedInClass rdf:resource="http://gensc.org/ns/mixs/terms/NucleicAcidSequenceSource" />
+    <dcterms:issued>2011-01-26</dcterms:issued>
+    <dcterms:modified>2011-01-26</dcterms:modified>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://gensc.org/ns/mixs/seq_meth">
+    <rdfs:label xml:lang="en">sequencing method</rdfs:label>
+    <rdfs:comment xml:lang="en">Sequencing method used; e.g. Sanger, pyrosequencing, ABI-solid</rdfs:comment>
+    <dcterms:description xml:lang="en">Sanger dideoxysequencing, pyrosequencing, polony</dcterms:description>
+    <rdfs:isDefinedBy rdf:resource="http://gensc.org/ns/mixs/" />
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+    <dwcattributes:status>recommended</dwcattributes:status>
+    <dwcattributes:organizedInClass rdf:resource="http://gensc.org/ns/mixs/terms/Sequencing" />
+    <dcterms:issued>2011-01-26</dcterms:issued>
+    <dcterms:modified>2011-01-26</dcterms:modified>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://gensc.org/ns/mixs/seq_quality_check">
+    <rdfs:label xml:lang="en">sequence quality check</rdfs:label>
+    <rdfs:comment xml:lang="en">Indicate if the sequence has been called by automatic systems (none) or undergone a manual editing procedure (e.g. by inspecting the raw data or chromatograms). Applied only for sequences that are not submitted to SRA,ENA or DRA</rdfs:comment>
+    <dcterms:description xml:lang="en"></dcterms:description>
+    <rdfs:isDefinedBy rdf:resource="http://gensc.org/ns/mixs/" />
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+    <dwcattributes:status>recommended</dwcattributes:status>
+    <dwcattributes:organizedInClass rdf:resource="http://gensc.org/ns/mixs/terms/Sequencing" />
+    <dcterms:issued>2011-01-26</dcterms:issued>
+    <dcterms:modified>2011-01-26</dcterms:modified>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://gensc.org/ns/mixs/sop">
+    <rdfs:label xml:lang="en">relevant standard operating procedures</rdfs:label>
+    <rdfs:comment xml:lang="en">Standard operating procedures used in assembly andor annotation of genomes, metagenomes or environmental sequences</rdfs:comment>
+    <dcterms:description xml:lang="en"></dcterms:description>
+    <rdfs:isDefinedBy rdf:resource="http://gensc.org/ns/mixs/" />
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+    <dwcattributes:status>recommended</dwcattributes:status>
+    <dwcattributes:organizedInClass rdf:resource="http://gensc.org/ns/mixs/terms/Sequencing" />
+    <dcterms:issued>2011-01-26</dcterms:issued>
+    <dcterms:modified>2011-01-26</dcterms:modified>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://gensc.org/ns/mixs/source_mat_id">
+    <owl:sameAs rdf:resource="http://rs.tdwg.org/dwc/terms/collectionCode"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://gensc.org/ns/mixs/specific_host">
+    <rdfs:label xml:lang="en">specific host</rdfs:label>
+    <rdfs:comment xml:lang="en">If there is a host involved, please provide its taxid (or environmental if not actually isolated from the dead or alive host - i.e. pathogen could be isolated from a swipe of a bench etc) and report whether it is a laboratory or natural host). From this we can calculate any number of groupings of hosts (e.g. animal vs plant, all fish hosts, etc)</rdfs:comment>
+    <dcterms:description xml:lang="en"></dcterms:description>
+    <rdfs:isDefinedBy rdf:resource="http://gensc.org/ns/mixs/" />
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+    <dwcattributes:status>recommended</dwcattributes:status>
+    <dwcattributes:organizedInClass rdf:resource="http://gensc.org/ns/mixs/terms/NucleicAcidSequenceSource" />
+    <dcterms:issued>2011-01-26</dcterms:issued>
+    <dcterms:modified>2011-01-26</dcterms:modified>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://gensc.org/ns/mixs/submitted_to_insdc">
+    <rdfs:label xml:lang="en">submitted to insdc</rdfs:label>
+    <rdfs:comment xml:lang="en">Depending on the study (large-scale e.g. done with next generation sequencing technology, or small-scale) sequences have to be submitted to SRA (Sequence Read Archive), DRA (DDBJ Read Archive) or via the classical WebinSequin systems to Genbank, ENA and DDBJ. Although this field is mandatory, it is meant as a self-test field, therefore it is not necessary to include this field in contextual data submitted to databases</rdfs:comment>
+    <dcterms:description xml:lang="en"></dcterms:description>
+    <rdfs:isDefinedBy rdf:resource="http://gensc.org/ns/mixs/" />
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+    <dwcattributes:status>recommended</dwcattributes:status>
+    <dwcattributes:organizedInClass rdf:resource="http://gensc.org/ns/mixs/terms/Investigation" />
+    <dcterms:issued>2011-01-26</dcterms:issued>
+    <dcterms:modified>2011-01-26</dcterms:modified>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://gensc.org/ns/mixs/subspecf_gen_lin">
+    <rdfs:label xml:lang="en">subspecific genetic lineage</rdfs:label>
+    <rdfs:comment xml:lang="en">This should provide further information about the genetic distinctness of this lineage by recording additional information i.e biovar, serovar, serotype, biovar, or any relevant genetic typing schemes like Group I plasmid. It can also contain alternative taxonomic information</rdfs:comment>
+    <dcterms:description xml:lang="en"></dcterms:description>
+    <rdfs:isDefinedBy rdf:resource="http://gensc.org/ns/mixs/" />
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+    <dwcattributes:status>recommended</dwcattributes:status>
+    <dwcattributes:organizedInClass rdf:resource="http://gensc.org/ns/mixs/terms/NucleicAcidSequenceSource" />
+    <dcterms:issued>2011-01-26</dcterms:issued>
+    <dcterms:modified>2011-01-26</dcterms:modified>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://gensc.org/ns/mixs/target_gene">
+    <rdfs:label xml:lang="en">target gene</rdfs:label>
+    <rdfs:comment xml:lang="en">Targeted gene or locus name for marker gene studies</rdfs:comment>
+    <dcterms:description xml:lang="en">16S rRNA, 18S rRNA, nif, amoA, rpo</dcterms:description>
+    <rdfs:isDefinedBy rdf:resource="http://gensc.org/ns/mixs/" />
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+    <dwcattributes:status>recommended</dwcattributes:status>
+    <dwcattributes:organizedInClass rdf:resource="http://gensc.org/ns/mixs/terms/Sequencing" />
+    <dcterms:issued>2011-01-26</dcterms:issued>
+    <dcterms:modified>2011-01-26</dcterms:modified>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://gensc.org/ns/mixs/target_subfragment">
+    <rdfs:label xml:lang="en">target subfragment</rdfs:label>
+    <rdfs:comment xml:lang="en">Name of subfragment of a gene or locus. Important to e.g. identify special regions on marker genes like V6 on 16S rRNA</rdfs:comment>
+    <dcterms:description xml:lang="en">V6, V9, ITS</dcterms:description>
+    <rdfs:isDefinedBy rdf:resource="http://gensc.org/ns/mixs/" />
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+    <dwcattributes:status>recommended</dwcattributes:status>
+    <dwcattributes:organizedInClass rdf:resource="http://gensc.org/ns/mixs/terms/Sequencing" />
+    <dcterms:issued>2011-01-26</dcterms:issued>
+    <dcterms:modified>2011-01-26</dcterms:modified>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://gensc.org/ns/mixs/trophic_level">
+    <rdfs:label xml:lang="en">trophic level</rdfs:label>
+    <rdfs:comment xml:lang="en">Trophic levels are the feeding position in a food chain. Microbes can be a range of producers (e.g. chemolithotroph)</rdfs:comment>
+    <dcterms:description xml:lang="en">""</dcterms:description>
+    <rdfs:isDefinedBy rdf:resource="http://gensc.org/ns/mixs/" />
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+    <dwcattributes:status>recommended</dwcattributes:status>
+    <dwcattributes:organizedInClass rdf:resource="http://gensc.org/ns/mixs/terms/NucleicAcidSequenceSource" />
+    <dcterms:issued>2011-01-26</dcterms:issued>
+    <dcterms:modified>2011-01-26</dcterms:modified>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://gensc.org/ns/mixs/url">
+    <owl:sameAs rdf:resource="http://rs.tdwg.org/dwc/terms/associatedReferences"/>
+  </rdf:Description>
+</rdf:RDF>

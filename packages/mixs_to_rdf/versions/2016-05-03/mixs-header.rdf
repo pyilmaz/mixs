@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE rdf:RDF [
+  <!ENTITY owlns "http://www.w3.org/2002/07/owl#">
+  <!ENTITY rdfns "http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+  <!ENTITY rdfsns "http://www.w3.org/2000/01/rdf-schema#">
+  <!ENTITY dctermsns "http://purl.org/dc/terms/">
+  <!ENTITY dwctermsns "http://rs.tdwg.org/dwc/terms/">
+  <!ENTITY dctypens "http://purl.org/dc/dcmitype/">
+  <!ENTITY dwcattributesns "http://rs.tdwg.org/dwc/terms/attributes/">
+]>
+<rdf:RDF 
+  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" 
+  xmlns:owl="http://www.w3.org/2002/07/owl#" 
+  xmlns:dcterms="http://purl.org/dc/terms/" 
+  xmlns:dwc="http://rs.tdwg.org/dwc/terms/" 
+  xmlns:dwcattributes="http://rs.tdwg.org/dwc/terms/attributes/" 
+  xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" 
+  xml:base="http://gensc.org/ns/mixs/terms/">
+   <rdf:Description rdf:about="http://gensc.org/ns/mixs/terms/">
+      <dcterms:title xml:lang="en">MIxS Namespace for terms in the http://gensc.org/ns/mixs/terms/ namespace</dcterms:title>
+      <rdfs:comment>To comment on this schema, please create a new issue in http://mixs.gensc.org/newticket</rdfs:comment>
+      <dcterms:publisher xml:lang="en">Genomic Standards Consortium (GSC)</dcterms:publisher>
+      <dcterms:modified>2016-05-03</dcterms:modified>
+   </rdf:Description>
+   <!-- 
+  Each rdf:Description uses the following:
+    owl:sameAs
+    rdfs:label
+    rdfs:comment
+    dcterms:description
+    rdfs:isDefinedBy
+    rdf:type
+    dwcattributes:status
+    dcterms:issued
+    dcterms:modified
+    dcterms:replaces
+    dwcattributes:abcdEquivalence
+-->
